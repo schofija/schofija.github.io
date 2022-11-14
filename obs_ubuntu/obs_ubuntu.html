@@ -6,7 +6,7 @@
 </style>
 <script>
 function toggleview() {
-  var x = document.getElementById("viewtoggle");
+  var x = document.getElementById("toggleview");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
@@ -29,7 +29,67 @@ function toggleview() {
 
 <button onclick="toggleview()"> Installation </button>
 <div id="toggleview">
-	<img src="install/1.png"> </img>
+	<ol>
+		<li>	<p> On Ubuntu 20.04 and up, OBS Studio can be found on the Ubuntu Software application </p>
+			<img src="install/1.png"> </img>
+		</li>
+		<li>	
+			<p> When we click on OBS Studio, we are shown a description and image of the application is shown. </p>
+			<p> We will install OBS using the green Install button found on this page </p>
+			<img src="install/2.png"> </img>
+		</li>
+		<li>	
+			<p> After the download and installation is finished, OBS Studio can be found by pressing the "Show Applications" button (3x3 grid on bottom-left of screen). </p>
+			<p> This means the Ubuntu Software application was able to successfully install OBS Studio  </p>
+			<img src="install/3.png"> </img>
+		</li>
+		<li>	
+			<p> When OBS Studio is launched for the first time, the application successfully opens. </p>
+			<p> A popup also appears asking us if we want to reset the UI. As this is the first time OBS has been opened, there is no reason for this popup to appear, and is
+				worth noting as an issue. </p>
+			<p> I clicked Yes to reset the UI </p>
+			<img src="install/4.png"> </img>
+		</li>
+		<li>	
+			<p> After "resetting" the UI, an "Auto-Configuration Wizard" appears. I left this on the default setting (Optimize for streaming). </p>
+			<img src="install/5.png"> </img>
+		</li>
+		<li>	
+			<p> The wizard gives us a popup to connect a streaming service. I chose Twitch. When I tried to connect my account (the reccomended option),
+				the following Twitch Login popup showed: </p>
+			<img src="install/6.png"> </img>
+			
+			<p> However, when I entered my login info, I received the following error: </p>
+			<img src="install/7.png"> </img>
+
+			<p> I next tried the alternative option, using a stream key. The "Get Stream Key" button opens Twitch's Creator Dashboard, where the stream key can be found </p>
+			<img src="install/8.png"> </img>
+		
+			<p> I paste the stream key in. This does not throw any errors, and I continue the Auto-Configuration Wizard </p>
+			<img src="install/9.png"> </img>
+		</li>
+		<li>	
+			<p> The Wizard then runs bandwidth tests to apply ideal settings for streaming: </p>
+			<img src="install/10.png"> </img>
+			
+			<p> After this has finished, we are shown the results of the bandwidth testing's findings, and are given an option to apply the settings </p>
+			<p> I choose to click "Apply Settings" </p>
+			<img src="install/11.png"> </img>
+		</li>
+		<li>	
+			<p> Next, the following message is shown: </p>
+			<img src="install/12.png"> </img>
+
+			<p> I click "Yes", and another popup appears. The settings are already prefilled with default values. I leave the values unchanged  and click "Ok" </p>
+			<img src="install/13.png"> </img>
+		</li>
+		<li>	
+			<p> After settings the WebSockets Server Settings, no more popups appear, and OBS appears as the following: </p>
+			<img src="install/14.png"> </img>
+
+			<p> This concludes the installation and first-time setup of OBS Studio </p>
+		</li>
+	</ol>
 </div>
 <h2> Basic Setup Walkthrough: </h2>
 
