@@ -4,6 +4,16 @@
 <style>
 	img { width:50% }
 </style>
+<script>
+function toggleview() {
+  var x = document.getElementById("viewtoggle");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+</script>
 </head>
 <body>
 
@@ -17,11 +27,10 @@
 </ul>
 
 
-
-<h2> Installation: </h2>
-
-<img src="install/1.png"> </img>
-
+<button onclick="toggleview()"> Installation </button>
+<div id="toggleview">
+	<img src="install/1.png"> </img>
+</div>
 <h2> Basic Setup Walkthrough: </h2>
 
 <h2> Advanced Usability Testing: <h2>
