@@ -127,12 +127,47 @@ function toggleview() {
 		<li> What improvements could be made to benefit performance/user experience? </li>
 	</ul>
 
-
-
+	<p> OBS comes with a barebones configuration, and we must set up basic docks before we can do anything as a user. The following video demonstrates how to do so: </p>
 	<video width="1280" height="720" controls>
 		<source src="testing/1-docks.mp4" type="video/mp4">
 		Your browser does not support the video tag...
 	</video>
+	<p> The user is able to complete this task with zero hiccups. However, if the user is not already familiar with OBS, this task could take time to do. This could be a 
+		potential source of frusturation with the user, as the application (by default) is essentially just a black screen with no options. I do not believe this is
+		good product design, as (just about) every user will be using these docks to configure their capturing. To improve the usability of OBS, I would suggest having
+		these docks enabled by default.
+	</p>
+	<h3> Capturing the user's desktop: </h3>
+	<p> Within the sources dock, the user is able to click the "+" button to add a source. Upon pressing this button, a large array of sources pops up. From the popup, we
+		will select Screen Capture (XSHM). Then, the following popup will appear:
+	</p>
+		<img src="testing/2.png"> </img>
+	<p> As we do not have any existing sources to choose from, we will use the default "Create new" option. The "Make source visible" checkmark is enabled by default, and
+		we will leave it enabled. Upon pressing "Ok", the popup closes, and another popup opens:  </p>
+		<img src="testing/3.png"> </img>
+	<p> OBS Studio by default is able to detect our desktop. As the laptop this is tested on has no secondary screens, the "Screens" dropdown menu only has the one option
+		already selected. "Capture cursor" is checked by default, and "Advanced Settings" is left unchecked. All cropping options are set to 0 by default. If the user
+		desires to crop the capture of the screen, they are able to input numbers into these fields. These numbers will crop the screen by the specified amount of pixels
+		from that direction. In the following test, I am able to successfully crop the capture to only show the clock at the top-center of GNOME: </p>
+		<img src="testing/4.png"> </img>
+	<p> Upon checking "Advanced Settings", only one more option pops up: </p>
+		<img src="testing/5.png">  </img>
+	<p> Our user has no use for the X server option, so we will not be testing this setting. </p>
+	<p> Once we hit "Ok", the popup closes, and we return to the main OBS application: </p>
+		<img src="testing/6.png"> </img>
+	<p> As our cropped capture is rather small, it only takes up a corner of the screen. We are able to use the red borders to drag and resize the capture, like so: </p>
+		<video width="1280" height="720" src="testing/resize.mp4" type="video/mp4"> </video>
+	<p> Our source is now added to the sources list in the bottom-left dock. If we double-click on our source, we are able to reset the cropping back to zero. Note that doing
+		this does not override the manual scaling we did in the video above, so we must scale it back after pressing "Ok", or else we just have a zoomed in view of the desktop: </p>
+	<img src="testing/7.png"> </img>
+	<p> After about 15-20 seconds of manually rescaling it to fit the capture, we are left with this: </p>
+		<img src="testing/8.png">
+	<p> Overall, the user was able to easily complete the task. It did not take long for the user to set up a desktop capture, and OBS makes it extremely intuitive to do so. The only
+		hiccup seemed to be the lack of a "reset scaling" button (in an easy to find place, at least), as it took about 20 seconds to accomplish what could be done in a single button click,
+		if that button was placed in an easy to find location. </p>
+
+
+
 </div>
 <h2> Advanced Usability Testing: <h2>
 
