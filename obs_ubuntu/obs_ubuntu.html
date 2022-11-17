@@ -2,27 +2,57 @@
 <html>
 <head>
 <style>
-	img { width:50% }
-</style>
-<script>
-function toggleview() {
-  var x = document.getElementById("toggleview");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
+body {background-color: lightgrey;}
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle; max-width: 640px}
 
-function toggleview2() {
-  var x = document.getElementById("toggleview2");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} 
-</script>
+/* Slideshow container */
+.slideshow-container {
+  max-width: 640px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+ /* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+</style>
+
 </head>
 <body>
 
@@ -38,70 +68,147 @@ function toggleview2() {
 
 <button onclick="toggleview()"> Installation (click to expand) </button>
 <div id="toggleview" style="display:none">
-	<h2> Cognitive Walkthrough of Installation: </h2>
-	<ol>
-		<li>	<p> On Ubuntu 20.04 and up, OBS Studio can be found on the Ubuntu Software application </p>
-			<img src="install/1.png"> </img>
-		</li>
-		<li>	
-			<p> When we click on OBS Studio, we are shown a description and image of the application is shown. </p>
-			<p> We will install OBS using the green Install button found on this page </p>
-			<img src="install/2.png"> </img>
-		</li>
-		<li>	
-			<p> After the download and installation is finished, OBS Studio can be found by pressing the "Show Applications" button (3x3 grid on bottom-left of screen). </p>
-			<p> This means the Ubuntu Software application was able to successfully install OBS Studio  </p>
-			<img src="install/3.png"> </img>
-		</li>
-		<li>	
-			<p> When OBS Studio is launched for the first time, the application successfully opens. </p>
-			<p> A popup also appears asking us if we want to reset the UI. As this is the first time OBS has been opened, there is no reason for this popup to appear, and is
-				worth noting as an issue. </p>
-			<p> I clicked Yes to reset the UI </p>
-			<img src="install/4.png"> </img>
-		</li>
-		<li>	
-			<p> After "resetting" the UI, an "Auto-Configuration Wizard" appears. I left this on the default setting (Optimize for streaming). </p>
-			<img src="install/5.png"> </img>
-		</li>
-		<li>	
-			<p> The wizard gives us a popup to connect a streaming service. I chose Twitch. When I tried to connect my account (the reccomended option),
-				the following Twitch Login popup showed: </p>
-			<img src="install/6.png"> </img>
-			
-			<p> However, when I entered my login info, I received the following error: </p>
-			<img src="install/7.png"> </img>
 
-			<p> I next tried the alternative option, using a stream key. The "Get Stream Key" button opens Twitch's Creator Dashboard, where the stream key can be found </p>
-			<img src="install/8.png"> </img>
-		
-			<p> I paste the stream key in. This does not throw any errors, and I continue the Auto-Configuration Wizard </p>
-			<img src="install/9.png"> </img>
-		</li>
-		<li>	
-			<p> The Wizard then runs bandwidth tests to apply ideal settings for streaming: </p>
-			<img src="install/10.png"> </img>
-			
-			<p> After this has finished, we are shown the results of the bandwidth testing's findings, and are given an option to apply the settings </p>
-			<p> I choose to click "Apply Settings" </p>
-			<img src="install/11.png"> </img>
-		</li>
-		<li>	
-			<p> Next, the following message is shown: </p>
-			<img src="install/12.png"> </img>
+<h2> Cognitive Walkthrough of Installation: </h2>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="install/1.png"> </img>
+	<div class="text"> 
+	 1. On Ubuntu 20.04 and up, OBS Studio can be found on the Ubuntu Software application
+	 </div>
+	
+  </div>
 
-			<p> I click "Yes", and another popup appears. The settings are already prefilled with default values. I leave the values unchanged  and click "Ok" </p>
-			<img src="install/13.png"> </img>
-		</li>
-		<li>	
-			<p> After settings the WebSockets Server Settings, no more popups appear, and OBS appears as the following: </p>
-			<img src="install/14.png"> </img>
+  <div class="mySlides1">
+    <img src="install/2.png"> </img>
+	 <div class="text"> 
+	 2. When we click on OBS Studio, we are shown a description and image of the application is shown.
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/3.png"> </img>
+	<div class="text"> 
+	 3. After the download and installation is finished, OBS Studio can be found by pressing the "Show Applications" button (3x3 grid on bottom-left of screen).
+		This means the Ubuntu Software application was able to successfully install OBS Studio.
+	</div>
+	</div>
+  
+    <div class="mySlides1">
+    <img src="install/4.png"> </img>
+	<div class="text"> 
+	4. When OBS Studio is launched for the first time, the application successfully opens.
+		A popup also appears asking us if we want to reset the UI. 
+		As this is the first time OBS has been opened, there is no reason for this popup to appear, 
+		and is worth noting as an issue. 
+		I clicked Yes to reset the UI
+	</div>
+	</div>
+  
+    <div class="mySlides1">
+    <img src="install/5.png"> </img>
+	 <div class="text"> 
+	 5. After "resetting" the UI, an "Auto-Configuration Wizard" appears. 
+	 I left this on the default setting (Optimize for streaming).
+	 </div>
+	
+	</div>
+  
+    <div class="mySlides1">
+    <img src="install/6.png"> </img>
+	 <div class="text"> 
+	 6. The wizard gives us a popup to connect a streaming service. I chose Twitch. 
+		When I tried to connect my account (the reccomended option),
+		the following Twitch Login popup showed:
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/7.png"> </img>
+	 <div class="text"> 
+	 7. However, when I entered my login info, I received the following error:
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/8.png"> </img>
+	 <div class="text"> 
+	 8. I next tried the alternative option, using a stream key. 
+		The "Get Stream Key" button opens Twitch's Creator Dashboard, where the stream key can be found
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/9.png"> </img>
+	 <div class="text"> 
+	 9. I paste the stream key in. This does not throw any errors, and I continue the Auto-Configuration Wizard
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/10.png"> </img>
+	 <div class="text"> 
+	 10. The Wizard then runs bandwidth tests to apply ideal settings for streaming:
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/11.png"> </img>
+	 <div class="text"> 
+	 11. After this has finished, we are shown the results of the bandwidth testing's findings, 
+	 and are given an option to apply the settings, which I choose to do. 
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/12.png"> </img>
+	 <div class="text"> 
+	 12. Next, the following message is shown:
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/13.png"> </img>
+	 <div class="text"> 
+	 13. I click "Yes", and another popup appears. 
+	 The settings are already prefilled with default values. 
+	 I leave the values unchanged  and click "Ok"
+	 </div>
+	
+  </div>
+  
+    <div class="mySlides1">
+    <img src="install/14.png"> </img>
+	 <div class="text"> 
+	 14. After settings the WebSockets Server Settings, no more popups appear, and OBS appears as the following:
+		<p> This concludes the installation and first-time setup of OBS Studio </p>
+	 </div>
+	
+  </div>
 
-			<p> This concludes the installation and first-time setup of OBS Studio </p>
-		</li>
-	</ol>
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<h2> Results and Findings: </h2>
+<p> OBS Studio is straightfoward to install on Ubuntu 20.04 LTS, requiring no advanced technical knowledge to do so. </p>
+<p>	However, the initial configuration was not without the following usability issues: </p>
+<ul>
+	<li> The user was prompted to reset the UI upon the first startup. There is nothing to reset at this point. </li>
+	<li> The user was unable to connect their twitch account to OBS, and had to use a stream key to authenticate instead. </li>
+</ul>
+<hr>
 </div>
 <p></p>
+
 <button onclick="toggleview2()"> Usability Testing (click to expand) </button>
 <div id="toggleview2" style="display:none">
 	<h2> Usability Testing: </h2>
@@ -243,5 +350,49 @@ function toggleview2() {
 
 </div>
 
+
+<script>
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+
+function toggleview() {
+  var x = document.getElementById("toggleview");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+
+function toggleview2() {
+  var x = document.getElementById("toggleview2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+
+
+</script>
 </body>
+
+
 </html>
