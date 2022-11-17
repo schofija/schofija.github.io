@@ -13,6 +13,15 @@ function toggleview() {
     x.style.display = "none";
   }
 } 
+
+function toggleview2() {
+  var x = document.getElementById("toggleview2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
 </script>
 </head>
 <body>
@@ -27,8 +36,9 @@ function toggleview() {
 </ul>
 
 
-<button onclick="toggleview()"> Installation </button>
+<button onclick="toggleview()"> Installation (click to expand) </button>
 <div id="toggleview" style="display:none">
+	<h2> Cognitive Walkthrough of Installation: </h2>
 	<ol>
 		<li>	<p> On Ubuntu 20.04 and up, OBS Studio can be found on the Ubuntu Software application </p>
 			<img src="install/1.png"> </img>
@@ -91,9 +101,10 @@ function toggleview() {
 		</li>
 	</ol>
 </div>
-
-<div id="toggleview" style="display:block">
-	<p> Usability testing can be defined as.... </p>
+<p></p>
+<button onclick="toggleview2()"> Usability Testing (click to expand) </button>
+<div id="toggleview2" style="display:none">
+	<h2> Usability Testing: </h2>
 	
 	<p> First, we will test OBS's ability to find sources and add them to the capture. To do this
 		we will run the following tests: </p>
@@ -101,13 +112,14 @@ function toggleview() {
 		<li> Capture the user's desktop. </li>
 		<li> Capture a specified window on the user's desktop </li>
 		<li> Capture webcam footage </li>
-		<li> Capture audio from the user's desktop </li>
-		<li> Capture microphone audio </li>
 		<li> Add an image overlay to the recording </li>
 		<li> Add a video overlay to the recording </li>
 		<li> Add a text overlay to the recording </li>
 		<li> Read text from a file and have it overlay the recording </li>
+		<li> Capture audio from the user's desktop (INC) </li>
+		<li> Capture microphone audio (INC) </li>
 	</ul>
+	<div style="display:none">
 	<p> Next, we will tests OBS's streaming and recording capabilities: </p>
 	<ul>
 		<li> Stream to Twitch.tv </li>
@@ -119,6 +131,7 @@ function toggleview() {
 		<li> Have seperate quality settings for streaming and recording </li>
 		<li> See capturing statistics </li>
 	</ul>
+	</div>
 	<p> When going through these tests, we will be considering the following questions: </p>
 	<ul>
 		<li> Is the user able to complete the task? </li>
@@ -156,7 +169,10 @@ function toggleview() {
 	<p> Once we hit "Ok", the popup closes, and we return to the main OBS application: </p>
 		<img src="testing/6.png"> </img>
 	<p> As our cropped capture is rather small, it only takes up a corner of the screen. We are able to use the red borders to drag and resize the capture, like so: </p>
-		<video width="1280" height="720" src="testing/resize.mp4" type="video/mp4"> </video>
+			<video width="1280" height="720" controls>
+		<source src="testing/resize.mp4" type="video/mp4">
+		Your browser does not support the video tag...
+	</video>
 	<p> Our source is now added to the sources list in the bottom-left dock. If we double-click on our source, we are able to reset the cropping back to zero. Note that doing
 		this does not override the manual scaling we did in the video above, so we must scale it back after pressing "Ok", or else we just have a zoomed in view of the desktop: </p>
 	<img src="testing/7.png"> </img>
@@ -165,11 +181,67 @@ function toggleview() {
 	<p> Overall, the user was able to easily complete the task. It did not take long for the user to set up a desktop capture, and OBS makes it extremely intuitive to do so. The only
 		hiccup seemed to be the lack of a "reset scaling" button (in an easy to find place, at least), as it took about 20 seconds to accomplish what could be done in a single button click,
 		if that button was placed in an easy to find location. </p>
+		
+	<h3> Capture a specified window on the user's desktop </h3>
+	<p> We use the same method to add a source as used before. This time we select "Window Capture (Xcomposite)" and the following popup shows: </p>
+		<img src="testing/9.png"> </img>
+	<p> We press "Ok", and are sent to the configuration menu: </p>
+		<img src="testing/10.png"> </img>
+	<p> Here, we are given a dropdown of all open windows on the system. In this case, the user chooses the select a notepad with the text "Hello World!" written on it.
+		This configuration menu is very similar to that of the Desktop Capture. 
+		There are some additional options, but these are not very useful to our user. </p>
+		<img src="testing/12.png"> </img>
+	<p> Upon exiting the configuration, the window capture correctly shows on OBS: </p>
+		<img src="testing/14.png"> </img>
+	
+	<h3> Capture webcam footage </h3>
+	<p> Using the same method as before, we add a new source. This time we select "Video Capture Device (V4L2)": </p>
+	<img src="testing/15.png"> </img>
+	<p> OBS is able to automatically detect our webcam and show live footage! </p>
+	<img src="testing/16.png"> </img>
+	<p> There are some options to manipulate the image displayed on the camera. The sliders appear to be functional, and changes to them appear in the preview: </p>
+	<img src="testing/18.png"> </img>
+	<p> Once the configuration menu is closed, our webcam footage correctly shows on OBS: </p>
+	<img src="testing/19.png"> </img>
+	
+	<h3> Add an image overlay to the recording </h3>
+	<p> Using the same method as before, we add a new source. This time we select "Image": </p>
+	<img src="testing/21.png"> </img>
+	<p> Here, we are given an option to select an image file: </p>
+	<img src="testing/22.png"> </img>
+	<p> A popup appears that allows us to navigate our directories to select the image: </p>
+	<img src="testing/23.png"> </img>
+	<p> Once the image is selected and the configuration is exited, we are able to see our image on OBS. Note that this image is transparent,
+	 and image transparency seems to be fully functional in OBS (although it is hard to tell from the screenshot below). </p>
+	<img src="testing/25.png"> </img>
+	<img src="testing/24.png"> </img>
+	<h3> Add a GIF to the recording </h3>
+	<p> The user is able to double-click the existing image element to re-open the configuration menu. They are able to select a different file, and in this case upload a cat gif: </p>
+	<img src="testing/26.png">
+	<p> GIF support appears to be fully functional in OBS. </p>
+	
+	<h3> Add a text overlay to the recording </h3>
+	<p> There are two options for text sources in OBS-- "Text (FreeType 2)" and "Text (Pango)." In this case, the user chooses the first option to pop up (FreeType 2): </p>
+	<img src="testing/27.png">
+	<p> The configuration menu greets us with an empty preview and a text box. We are able to type text into the box, and the preview updates responsively: </p>
+	<img src="testing/28.png">
+	<img src="testing/29.png">
+	<p> Upon exiting the configuration menu, everything appears to be working: </p>
+	<img src="testing/30.png">
+	<h3> Read text from a file and have it overlay the recording </h3>
+	<p> The following video demonstrates the usability testing for reading text from a file. In this video, we attempt to read text from a file. We test to see if OBS is
+		able to update the text on the recording when the contents of the file change. </p>
+			<video width="1280" height="720" controls>
+		<source src="testing/textfromfile.mp4" type="video/mp4">
+		Your browser does not support the video tag...
+	</video>
+	<p> As this video demonstrates, reading from a file appears to be completely broken on the FreeType 2 based text source. Clicking the "read from file" check box does
+		not seem to do anything. Users who would like to read text from a file must use the Pango option. For the user, it is not clear to them why there are two different
+		source options that appear identical, except for this issue. </p>
 
 
 
 </div>
-<h2> Advanced Usability Testing: <h2>
 
 </body>
 </html>
