@@ -1,73 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> Jack Schofield </title>
-  <style>
-      body
-      {
-          font-family: times new roman, serif;
-          text-align: left;
-          padding-left: 300px;
-          padding-right: 300px;
-      }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1> Jack Schofield </h1>
-    <h3> schofija.github.io </h3>
-<hr />
-<h2> About me: </h2>
-<p> I am an undergraduate at Oregon State University pursuing a Bachelor of Science in Computer Science at Oregon State University.
-I'm currently a Senior and have a GPA of 3.86.
-</p>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h2> Links: </h2>
-<a href="resume.pdf"> Resume (PDF) </a>
-<br>
-<a href="https://github.com/schofija"> GitHub </a>
-<br>
-<a href="https://www.linkedin.com/in/schofija"> LinkedIn </a>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Write a brief introduction about yourself and your software development journey.
+        </p>
+    </section>
 
-<h2> Projects: </h2>
-<h3> Linux Shell (smallsh) </h3>
-<p> A shell (written in C) with functionalities similar to Bash </p>
-<ul>
-  <li> Prompt for running commands </li>
-  <li> $$ expansion </li>
-  <li> Handling of blank lines and comments (#) </li>
-  <li> Supports running commands in backround </li>
-  <li> I/O redirection </li>
-</ul>
-<a href="https://github.com/schofija/smallsh"> Project Repository </a>
+    <section id="projects">
+        <h2>Projects</h2>
+        <!-- Add your project showcase here -->
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <a href="#">View Project</a>
+        </div>
 
-<h3> 3D-Keyboard </h3>
-<p> An interactive 3D keyboard programmed in OpenGL. Keyboard mirrors real-life keypresses and has basic shading added. This was a project for 
-  CS450: Introduction to Computer Graphics.
-</p>
-<a href="https://github.com/schofija/3d-keyboard"> Project Repository </a>
-<br>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+            <a href="#">View Project</a>
+        </div>
 
-<h3> Computer Graphics Shaders Demonstration </h3>
-<p> A demonstration of various computer graphics shaders using OpenGL and GLSL. This was a class project for CS457: Computer Graphics Shaders. </p>
+        <!-- Add more project sections as needed -->
+    </section>
 
-<a href="https://github.com/schofija/cs457finalproj"> Project Repository </a>
-<br>
-<a href="https://media.oregonstate.edu/media/t/1_9ixj291w"> Video Demonstration  </a>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+            You can reach me at <a href="mailto:youremail@example.com">youremail@example.com</a>.
+        </p>
+    </section>
 
-<h2> Technical Skills: </h2>
-<p> Areas I am proficient in: </p>
-<ul>
-  <li> C/C++ </li>
-  <li> OpenGL and GLSL </li>
-  <li> Bash </li>
-  <li> Linux environment-related work </li>
-</ul>
-<p> Areas I have intermediate experience in: </p>
-<ul>
-  <li> Python, Rust, R, Assembly </li>
-  <li> OpenMP, OpenCL, CUDA </li>
-  <li> Robot Operating System (ROS) </li>
-</ul>
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
 </body>
 </html>
