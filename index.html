@@ -5,67 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack Schofield</title>
     <link rel="stylesheet" href="styles.css">
+	<script src="nightmode.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Jack Schofield</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+	<header>
+        <div class="header-content">
+            <h1>Jack Schofield</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://github.com/schofija/" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/schofija/" target="_blank">LinkedIn</a></li>
+                    <li><a href="resume.pdf">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="night-mode-container">
+            <div id="night-mode-toggle">
+                  <span class="moon-icon">&#9790;</span>
+            </div>
+        </div>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm Jack. I recently graduated from Oregon State University with a B.S. in Computer Science. This website showcases some of my favorite projects (both personal and school-related) I've worked on over the years.
-        </p>
+        <h2>About</h2>
+        <div class="about">
+            <p>
+                Hi! I'm Jack. I recently graduated from Oregon State University with a B.S. in Computer Science. This website showcases some of my favorite projects (both personal and school-related) I've worked on over the years.
+            </p>
 
-        <p> Still a WIP and will be updated frequently :) </p>
+            <p> Still a WIP and will be updated frequently :) </p>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <!-- Add your project showcase here -->
-        <div class="project">
+        <div class="project">  
             <h3>Patient Monitoring Robot</h3>
             <p>Robot designed to monitor the health of assisted living patients. Follows the patient and detects abnormal motions (such as falling) utilizing an Intel® RealSense™ camera alongside object recognition algorithms (YOLO, MediaPipe).
-Written in Python and implemented using ROS2 Foxy. I was responsible for implementing patient tracking as well as ROS2 integration and testing.	
-Team Capstone Project sponsored by Intel. Awarded the Pioneering Concept Industry Choice Award at Oregon State University’s 2023 Engineering Expo
-.</p>
-            <a href="https://github.com/schofija/patient-monitoring/">Project Repository</a>
+                Written in Python and implemented using ROS2 Foxy. I was responsible for implementing patient detection/tracking, patient following, and ROS2 integration and testing of the fall detection algorithms.	
+                Team Capstone Project sponsored by Intel.
+            </p>
+            <p>Awarded the Pioneering Concept Industry Choice Award at Oregon State University’s 2023 Engineering Expo.</p>
+            <div>
+            <img src="5_pmr/pmr.jpg">
+            <img src="5_pmr/fall.gif">
+            </div>
+            <div>
+                <a href="https://pmr-osu.github.io/" target="_blank">&#128279 Project Website</a>
+            </div>
+            <div>
+                <a href="https://github.com/schofija/patient-monitoring/" target="_blank">&#128279 Project Repository and Archive (GitHub)</a>
+            </div>
         </div>
-
-        <div class="project">
+        <div class="project">  
             <h3>AMD/Radeon LOD Tweaker</h3>
-            <p>Program that locates and writes to Windows registry values automatically in order to modify level-of-detail (LOD) in DirectX9.0 and lower games. Only works on AMD GPUs. </p>
-            <p>Written in C# </p>
-            <a href="https://github.com/schofija/qlodlauncher">Project Repository</a>
+            <p>Program that locates and writes to Windows registry values automatically in order to modify level-of-detail (LOD) in DirectX9.0 and lower games. Only works on AMD GPUs.
+            </p>
+            <div>
+            <img src="qlodlauncher/preview.png">
+            </div>
+            <div>
+                <a href="https://github.com/schofija/qlodlauncher" target="_blank">&#128279 Github Repository</a>
+            </div>
         </div>
+        <div class="project">  
+            <h3>First Robotics Competition (FRC) -- Team A05 Annex #6831</h3>
+            <p>
+                A founding member of our high school's first FRC Robotics team. My contribution highlights include designing and 3D-printing specialty parts
+                using 3D CAD software (Autodesk Fusion 360), developing and maintaining our team's website, logo design, and securing team funding via outreach
+                to local businesses. I competed in the 2018 and 2019 competitions before graduating and pursuing my degree. 
+            </p>
+            <p>
+                FRC Robotics was one of my most enjoyable experiences in high school, and greatly inspired me to pursue my degree in computer science.
+            </p>
+            <div>
+                <img src="a05annex/worlds2019.jpg">
+             </div>
+            <h4> Team Accomplishments </h4>
+            <ul>
+                <li style="font-weight: bold;"> 2019 Houston World Championship Participant </li>
+                <li> Judges Award @ 2019 Houston World Championship </li>
+                <li>PNW Northwest District Championship 2019 Engineering Inspiration Award</li>
+                <li>PNW District Wilsonville Event 2019 Engineering Inspiration Award</li>
+                <li>1st Place Girls Generation 2018 (2019 pre-season event) </li>
+                <li style="font-weight: bold;"> 2018 Houston World Championship Participant (Rookie Year) </li>
+                <li>Pacific Northwest District Championship 2018 Highest Rookie Seed</li>
+                <li>PNW District SunDome Event 2018 Rookie Inspiration Award sponsored by National Instruments</li>
+                <li>PNW District SunDome Event 2018 Highest Rookie Seed</li>
+                <li>PNW District Clackamas Academy Event 2018 Rookie All Star Award Winners</li>
+                <li>PNW District Clackamas Academy Event 2018 Highest Rookie Seed</li>
+                
+            </ul>
 
-        <div class="project">
-            <h3>OpenGL Keyboard Visualization</h3>
-            <p>A 3D visualization of a keyboard that visually responds to real-life keypresses. Shading is
-included for toggling backlight options. </p>
-            <p>Written in C++ and OpenGL Shading Language (GLSL) </p>
-            <a href="https://github.com/schofija/3d-keyboard">Project Repository</a>
+            <a href="https://a05annex.org/" target="_blank">&#128279 Team Webpage</a>
         </div>
-
-        <!-- Add more project sections as needed -->
     </section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2>Contact</h2>
+        <div class="contact">
         <p>
-            You can reach me at <a href="jack.schofield@protonmail.com">jack.schofield@protonmail.com</a>.
+             <a href="jack.schofield@protonmail.com">&#9993 jack.schofield@protonmail.com</a>.
         </p>
+        </div>
     </section>
 
-    <footer>
+    <!-- <footer>
         <p>&copy; 2023 Jack Schofield. All rights reserved.</p>
-    </footer>
+    </footer> -->
 </body>
+
 </html>

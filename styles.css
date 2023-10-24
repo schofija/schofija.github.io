@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* Reset some default browser styles
 body, h1, h2, h3, p, ul, li, a {
     margin: 0;
     padding: 0;
@@ -7,111 +7,199 @@ body, h1, h2, h3, p, ul, li, a {
 	color: #0f0f0f;
 }
 
-/* Set a background color and text color */
 body {
     font-family: monospace;
     background-color: #f2ffff;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding-top: 64px;
+}
+
+body.night-mode {
+    font-family: monospace;
+    background-color: #0d2226;
+    color: #f2ffff;
+    margin: 0;
+    padding-top: 64px;
+} */
+
+.content {
+    /* Adjust the padding or margin for the content to avoid overlapping with the header */
+    /* Other styles for your content */
+    overflow-y: visible; /* Allow the scrollbar to appear in the content */
 }
 
 /* Header styles */
 header {
     background-color: #0f0f0f;
     color: #fff;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	overflow: hidden;
+    /* box-shadow: 0px 4px 40px 10px #aaa; */
 }
 
-header h1 {
-    font-size: 2.5rem;
-	color: #fff;
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-nav ul {
-    margin-top: 20px;
+header h1, header h1.night-mode {
+    padding-top: 5px;
+    font-size: 2.0rem;
+    color: #fff;
+    margin: 0;
+	/* margin-bottom: 10px; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav ul li {
-    display: inline;
+
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
     margin-right: 20px;
 }
 
-nav ul li a {
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
     color: #fff;
     font-weight: bold;
+    text-decoration: none;
+	transition: color 0.3s;
 }
-nav ul li a:hover {
+
+header nav ul li a:hover {
     color: #c06eff;
     font-weight: bold;
 }
 
+/* Styles for the night mode toggle */
+.night-mode-container {
+    position: absolute;
+    top: 16px;
+    right: 26px;
+}
+
+.moon-icon {
+    font-size: 32px; /* Adjust the size as needed */
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s; /* Add a transition for a smooth color change */
+    user-select: none; /* Prevent text selection for the icon */
+}
+
+.moon-icon:hover {
+    color: #c06eff; /* Change the color on hover */
+}
+
+.sun-icon {
+    font-size: 36px; /* Adjust the size as needed */
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s; /* Add a transition for a smooth color change */
+    user-select: none; /* Prevent text selection for the icon */
+}
+
+.sun-icon:hover {
+    color: #f5bf42; /* Change the color on hover */
+}
+
 /* Main content styles */
 section {
-    padding: 40px;
+    padding: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+body {
+    padding-top:105px;
+    color:black;
+    background-color: #f4f4f4 ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.night-mode {
+    color:white;
+    background-color: #0f0f0f;
 }
 
 h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+h2.night-mode {
+    border-bottom: 1px solid white;
 }
 
-/* Project showcase styles */
+.about {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 .project {
-    background-color: #fff;
-    border: 1px solid #007b9d;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.project h3 {
-    font-size: 1.4rem;
+.contact {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.project p {
-    font-size: 1.0rem;
-    margin-top: 10px;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #0f0f0f;
-	border: 1px solid #0f0f0f;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
+a {
     text-decoration: none;
+    font-family: monospace;
+    font-size: large;
     font-weight: bold;
 }
 
-.project a:hover {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #ffffff;
-	border: 1px solid #007b9d;
-    color: #0f0f0f;
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
+a:hover {
+    text-decoration: underline;
 }
+
+.project div {
+    padding-top: 10px;
+}
+
 
 /* Footer styles */
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #0f0f0f;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px 0;
+    bottom: 0;
+  }
+  
+.footer p {
+    color: white;
+    text-align: left;
 }
+
+
+
+
+
+
 
 /* Responsive styles (adjust as needed) */
 @media screen and (max-width: 768px) {
