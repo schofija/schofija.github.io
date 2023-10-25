@@ -41,14 +41,14 @@
         <h2>Projects</h2>
         <div class="project">  
             <h3>Patient Monitoring Robot</h3>
-            <p>Robot designed to monitor the health of assisted living patients. Follows the patient and detects abnormal motions (such as falling) utilizing an Intel® RealSense™ camera alongside object recognition algorithms (YOLO, MediaPipe).
+            <p>Team Capstone Project sponsored by Intel. Robot designed to monitor the health of assisted living patients. Follows the patient and detects abnormal motions (such as falling) utilizing an Intel® RealSense™ camera alongside object recognition algorithms (YOLO, MediaPipe).
                 Written in Python and implemented using ROS2 Foxy. I was responsible for implementing patient detection/tracking, patient following, and ROS2 integration and testing of the fall detection algorithms.	
-                Team Capstone Project sponsored by Intel.
             </p>
-            <p>Awarded the Pioneering Concept Industry Choice Award at Oregon State University’s 2023 Engineering Expo.</p>
+            <p style="font-weight: bold;">&#11088 Awarded the Pioneering Concept Industry Choice Award at Oregon State University’s 2023 Engineering Expo.</p>
             <div>
             <img src="5_pmr/pmr.jpg">
             <img src="5_pmr/fall.gif">
+            <img style="max-height: 240px;" src="5_pmr/follow.gif">
             </div>
             <div>
                 <a href="https://pmr-osu.github.io/" target="_blank">&#128279 Project Website</a>
@@ -58,8 +58,34 @@
             </div>
         </div>
         <div class="project">  
+            <h3>OpenCL + OpenGL Particle System Physics Simulation</h3>
+            <p>
+                An OpenGL particle simulation that utilizes OpenCL for physics calculations. Tested on varying levels of particles, with a report (linked below) to analyze the performance with
+                parallelization.
+            </p>
+            <div>
+                <img style="max-height: 360px;"src="opencl_phys/particle.gif">
+            </div>
+            <div>
+                <a href="opencl_phys/OpenCL + OpenGL Particle System Report and Commentary.pdf">&#128240 Performance Analysis (PDF)</a>
+            </div>
+        </div>
+        <div class="project">  
+            <h3>Bezier Curves Demo</h3>
+            <p>A demo OpenGL program that utilizes 3D bezier curves in order to create an animated visual of a beach sunset. A key can be pressed in order to toggle visibility of control points for the curves.
+            </p>
+            <div>
+                <img style="max-height: 300px;"src="1_bezier/bezier.gif">
+                <img style="max-height: 300px;" src="1_bezier/bezier_ctrlpts.png">
+            </div>
+        </div>
+        <div class="project">  
             <h3>AMD/Radeon LOD Tweaker</h3>
-            <p>Program that locates and writes to Windows registry values automatically in order to modify level-of-detail (LOD) in DirectX9.0 and lower games. Only works on AMD GPUs.
+            <p>Program that automatically locates and writes to Windows registry values automatically in order to forcefully modify level-of-detail (LOD) in DirectX9.0 and lower games.                
+                Due to differing registry structures between vendors, this program only works on Radeon GPUs.
+            </p>
+            <p>
+                Written in C#.
             </p>
             <div>
             <img src="qlodlauncher/preview.png">
